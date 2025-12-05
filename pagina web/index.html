@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edge Validator Pro™ – Valida tu estrategia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0px); }
+    }
+    .card-float {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-400 flex items-center justify-center">
+            <span class="text-emerald-400 font-bold text-xl">E</span>
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Edge Validator Pro™</p>
+            <p class="text-xs text-slate-400">Backtesting profesional para traders</p>
+          </div>
+        </div>
+        <a href="#planes"
+           class="hidden sm:inline-block text-xs font-medium px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition">
+          Ver planes
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- HERO -->
+      <section class="max-w-5xl mx-auto px-4 py-10 grid gap-10 md:grid-cols-[1.3fr,1fr] items-center">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+            ¿Tu estrategia tiene un <span class="text-emerald-400">edge real</span>
+            o solo fue una buena racha?
+          </h1>
+
+          <p class="mt-4 text-sm text-slate-300">
+            Analizo tu estrategia con años de datos reales, horarios, parámetros y escenarios extremos del mercado.
+            Es mejor invertir <strong>$29–$119</strong> en validar tu sistema que perder años con una estrategia sin edge.
+          </p>
+
+          <p class="mt-3 italic text-slate-400 text-xs">
+            “Un buen backtest vale más que 12 meses de operar a ciegas.”
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#planes"
+               class="px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-semibold transition">
+              Ver planes
+            </a>
+
+            <button onclick="openModal()"
+                    class="px-5 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-sm font-semibold transition">
+              Pagar con Binance Pay
+            </button>
+          </div>
+        </div>
+
+        <!-- LADO DERECHO -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl card-float">
+          <p class="text-xs text-slate-400 mb-2">Ejemplo de informe</p>
+
+          <div class="bg-slate-950 rounded-xl p-4 mb-4">
+            <p class="text-xs text-slate-400 mb-3">EQUITY / 7 años (ejemplo)</p>
+            <svg viewBox="0 0 220 90" class="w-full h-24">
+              <defs>
+                <linearGradient id="equityFill" x1="0" x2="1" y1="1" y2="0">
+                  <stop offset="0%" stop-color="#22c55e33" />
+                  <stop offset="100%" stop-color="#22c55e99" />
+                </linearGradient>
+              </defs>
+
+              <polyline
+                points="0,70 20,68 40,65 60,60 80,55 100,58 120,50 140,45 160,40 180,42 200,35 220,30"
+                fill="none" stroke="#22c55e" stroke-width="2" />
+
+              <polygon
+                points="0,90 0,70 20,68 40,65 60,60 80,55 100,58 120,50 140,45 160,40 180,42 200,35 220,30 220,90"
+                fill="url(#equityFill)" />
+            </svg>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="bg-slate-950 rounded-lg p-3">
+              <p class="text-slate-400">Profit Factor</p>
+              <p class="text-lg font-bold text-emerald-400">2.31</p>
+            </div>
+            <div class="bg-slate-950 rounded-lg p-3">
+              <p class="text-slate-400">Win rate</p>
+              <p class="text-lg font-bold text-emerald-400">57.8%</p>
+            </div>
+            <div class="bg-slate-950 rounded-lg p-3">
+              <p class="text-slate-400">Max DD</p>
+              <p class="text-lg font-bold text-rose-400">-8.4%</p>
+            </div>
+            <div class="bg-slate-950 rounded-lg p-3">
+              <p class="text-slate-400">Años test</p>
+              <p class="text-lg font-bold text-slate-100">7</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANES -->
+      <section id="planes" class="max-w-5xl mx-auto px-4 py-10">
+        <h2 class="text-xl font-semibold mb-2">Planes y precios</h2>
+        <p class="text-sm text-slate-300 mb-6">
+          Una validación profesional puede ahorrarte años de perder dinero con un sistema que no funciona.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-3">
+
+          <!-- PLAN 1 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col">
+            <p class="text-xs text-slate-400 mb-1">Plan 1</p>
+            <h3 class="font-semibold text-lg">EDGE CHECK 3A™</h3>
+            <p class="text-2xl font-bold mt-2">$29</p>
+            <p class="mt-2 text-xs text-slate-300">
+              Backtesting profesional en los últimos <strong>3 años</strong>: cada día, cada trade y cada escenario.
+            </p>
+            <ul class="mt-3 text-xs text-slate-300 space-y-1 flex-1">
+              <li>• Estadísticas completas</li>
+              <li>• Equity + profit mensual</li>
+              <li>• Análisis de consistencia</li>
+              <li>• Veredicto final profesional</li>
+              <li>• Informe PDF completo</li>
+            </ul>
+
+            <button onclick="openModal()"
+              class="mt-4 block text-center text-sm font-semibold px-4 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 transition">
+              Pagar con Binance Pay
+            </button>
+          </div>
+
+          <!-- PLAN 2 -->
+          <div class="bg-slate-900 border border-emerald-500 rounded-2xl p-5 flex flex-col shadow-lg shadow-emerald-500/20">
+            <p class="text-xs text-emerald-400 mb-1">Más vendido</p>
+            <h3 class="font-semibold text-lg">EDGE MAP 5A™</h3>
+            <p class="text-2xl font-bold mt-2">$59</p>
+            <p class="mt-2 text-xs text-slate-300">
+              <strong>5 años</strong> de datos + mapa profesional de horas calientes y horas muertas.
+            </p>
+            <ul class="mt-3 text-xs text-slate-300 space-y-1 flex-1">
+              <li>• Heatmap profesional</li>
+              <li>• Sesiones globales</li>
+              <li>• Análisis por horario</li>
+              <li>• Horas recomendadas</li>
+              <li>• Todo lo del Plan 1</li>
+            </ul>
+
+            <button onclick="openModal()"
+              class="mt-4 block text-center text-sm font-semibold px-4 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 transition">
+              Pagar con Binance Pay
+            </button>
+          </div>
+
+          <!-- PLAN 3 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col">
+            <p class="text-xs text-slate-400 mb-1">Plan avanzado</p>
+            <h3 class="font-semibold text-lg">EDGE MASTER 7A™</h3>
+            <p class="text-2xl font-bold mt-2">$119</p>
+            <p class="mt-2 text-xs text-slate-300">
+              <strong>7 años</strong> + optimización de parámetros profesional (SL, TP, filtros y horarios).
+            </p>
+            <ul class="mt-3 text-xs text-slate-300 space-y-1 flex-1">
+              <li>• Ranking de configuraciones</li>
+              <li>• Eliminación de horas muertas</li>
+              <li>• Parámetros sugeridos</li>
+              <li>• Informe estilo prop firm</li>
+              <li>• Todo lo del Plan 1 y 2</li>
+            </ul>
+
+            <button onclick="openModal()"
+              class="mt-4 block text-center text-sm font-semibold px-4 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 transition">
+              Pagar con Binance Pay
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DETALLE COMPLETO DE CADA PLAN -->
+      <section class="max-w-5xl mx-auto px-4 py-10">
+        <h2 class="text-xl font-semibold mb-4">¿Qué recibes exactamente en cada plan?</h2>
+
+        <div class="grid gap-6 md:grid-cols-3 text-xs">
+
+          <!-- Plan 1 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+            <img src="plan1.png" class="rounded-lg w-full" alt="Plan 1">
+            <p class="font-semibold text-sm">Plan 1 — EDGE CHECK 3A™</p>
+            <p class="text-slate-400">
+              Evaluación completa de tu estrategia durante 3 años, día por día, identificando si realmente genera
+              rentabilidad o solo fue una racha de suerte.
+            </p>
+            <ul class="text-slate-300 space-y-1">
+              <li>• Equity trimestral y anual</li>
+              <li>• Profit mensual detallado</li>
+              <li>• Estadísticas completas</li>
+              <li>• Informe PDF profesional</li>
+              <li>• Veredicto final</li>
+            </ul>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="bg-slate-900 border border-emerald-500 rounded-2xl p-4 space-y-3">
+            <img src="plan2.png" class="rounded-lg w-full" alt="Plan 2">
+            <p class="font-semibold text-sm">Plan 2 — EDGE MAP 5A™</p>
+            <p class="text-slate-400">
+              Mapa profesional de comportamiento del mercado durante 5 años: dónde tu estrategia gana más, dónde pierde,
+              y en qué sesiones tiene mayor edge.
+            </p>
+
+            <ul class="text-slate-300 space-y-1">
+              <li>• Heatmap de horas fuertes y débiles</li>
+              <li>• Sesiones globales</li>
+              <li>• Análisis de volatilidad</li>
+              <li>• Horas recomendadas</li>
+              <li>• Todo lo del Plan 1</li>
+            </ul>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+            <img src="plan3.png" class="rounded-lg w-full" alt="Plan 3">
+            <p class="font-semibold text-sm">Plan 3 — EDGE MASTER 7A™</p>
+            <p class="text-slate-400">
+              Optimización profesional de parámetros: pruebo múltiples combinaciones robustas sin modificar tus reglas.
+            </p>
+
+            <ul class="text-slate-300 space-y-1">
+              <li>• Ranking completo de configuraciones</li>
+              <li>• Parámetros robustos sugeridos</li>
+              <li>• Eliminación de horas muertas</li>
+              <li>• Informe estilo prop firm</li>
+              <li>• Todo lo del Plan 1 y 2</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- QUE PASA DESPUÉS DEL PAGO -->
+      <section class="max-w-5xl mx-auto px-4 py-10">
+        <h2 class="text-xl font-semibold mb-4">¿Qué pasa después del pago?</h2>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 text-sm text-slate-300">
+          <p>
+            Una vez completado el pago, recibirás una <strong>encuesta profesional</strong>
+            donde debes ingresar todos los detalles de tu estrategia para replicarla EXACTAMENTE.
+          </p>
+
+          <p class="font-semibold text-emerald-400">La encuesta solicita:</p>
+
+          <ul class="space-y-1">
+            <li>• Activo que operas</li>
+            <li>• Temporalidad exacta</li>
+            <li>• Horarios (o 24/7)</li>
+            <li>• SL, TP, ATR, filtros, sesiones, EMAs</li>
+            <li>• Reglas de entrada y salida</li>
+          </ul>
+
+          <p class="text-slate-300">
+            Sin este formulario no inicia el análisis.
+          </p>
+
+          <p class="text-slate-300 mt-4">
+            <strong>Para verificar tu pago, por favor envía el comprobante de pago a mi Telegram:</strong>
+          </p>
+
+          <a href="https://t.me/+573224646814" target="_blank"
+             class="inline-block bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+             📤 Enviar comprobante a Telegram
+          </a>
+        </div>
+      </section>
+
+      <!-- MÉTODOS DE PAGO -->
+      <section id="pagos" class="max-w-4xl mx-auto px-4 py-10">
+        <h2 class="text-xl font-semibold mb-4">Métodos de pago alternos</h2>
+        <p class="text-sm text-slate-400 mb-4">
+          Si no deseas usar Binance Pay, puedes pagar con métodos locales.
+        </p>
+
+        <select id="paisSelector"
+                class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2 text-sm">
+          <option value="">-- Elegir país --</option>
+          <option value="colombia">Colombia</option>
+          <option value="mexico">México</option>
+          <option value="argentina">Argentina</option>
+          <option value="latam">Latinoamérica (otros)</option>
+          <option value="usa">Estados Unidos</option>
+          <option value="europa">Europa</option>
+        </select>
+
+        <div id="resultadoPago" class="mt-6 space-y-4"></div>
+      </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 text-slate-500 text-xs py-4 text-center">
+      © <span id="year"></span> Edge Validator Pro™
+    </footer>
+  </div>
+
+<!-- MODAL QR -->
+<div id="qrModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+  <div class="bg-slate-900 p-6 rounded-2xl max-w-sm w-full border border-slate-700 text-center">
+    <h3 class="text-lg font-semibold mb-2">Pagar con Binance Pay</h3>
+    <p class="text-sm text-slate-400 mb-4">Escanea el código usando la app de Binance</p>
+
+    <img src="binance.jpg" class="w-64 mx-auto rounded-lg border border-slate-700" alt="QR Binance Pay" />
+
+    <p class="mt-4 text-sm text-slate-300">Alias:</p>
+    <p class="text-xl font-bold text-emerald-400">User-fe458</p>
+
+    <button onclick="closeModal()"
+            class="mt-6 px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 hover:bg-slate-700">
+      Cerrar
+    </button>
+  </div>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function openModal() {
+  document.getElementById("qrModal").classList.remove("hidden");
+  document.getElementById("qrModal").classList.add("flex");
+}
+function closeModal() {
+  document.getElementById("qrModal").classList.add("hidden");
+}
+
+// MULTIPAGO
+document.getElementById("paisSelector").addEventListener("change", function () {
+  const BINANCE_ALIAS = "User-fe458";
+  const NEQUI = "3224646814";
+  const DAVIPLATA = "3224646814";
+  const DOLARAPP = "@david";
+
+  const pais = this.value;
+  const div = document.getElementById("resultadoPago");
+
+  let html = "";
+
+  switch (pais) {
+    case "colombia":
+      html = `
+      <div class='bg-slate-800 p-4 rounded-lg border border-slate-700'>
+        <p class='text-emerald-400 font-semibold mb-2'>Colombia — Métodos disponibles</p>
+        <ul class='text-slate-300 space-y-2'>
+          <li>• Nequi: <strong>${NEQUI}</strong></li>
+          <li>• Daviplata: <strong>${DAVIPLATA}</strong></li>
+          <li>• Binance Pay: <strong>${BINANCE_ALIAS}</strong></li>
+        </ul>
+      </div>`;
+      break;
+
+    case "mexico":
+      html = `
+      <div class='bg-slate-800 p-4 rounded-lg border border-slate-700'>
+        <p class='text-emerald-400 font-semibold mb-2'>México — Métodos disponibles</p>
+        <ul class='text-slate-300 space-y-2'>
+          <li>• Binance Pay: <strong>${BINANCE_ALIAS}</strong></li>
+          <li>• DolarApp: <strong>${DOLARAPP}</strong></li>
+        </ul>
+      </div>`;
+      break;
+
+    case "argentina":
+    case "latam":
+      html = `
+      <div class='bg-slate-800 p-4 rounded-lg border border-slate-700'>
+        <p class='text-emerald-400 font-semibold mb-2'>Latinoamérica — Métodos disponibles</p>
+        <ul class='text-slate-300 space-y-2'>
+          <li>• Binance Pay (recomendado): <strong>${BINANCE_ALIAS}</strong></li>
+        </ul>
+      </div>`;
+      break;
+
+    case "usa":
+    case "europa":
+      html = `
+      <div class='bg-slate-800 p-4 rounded-lg border border-slate-700'>
+        <p class='text-emerald-400 font-semibold mb-2'>Pagos internacionales</p>
+        <ul class='text-slate-300 space-y-2'>
+          <li>• Binance Pay: <strong>${BINANCE_ALIAS}</strong></li>
+        </ul>
+        <p class='text-xs text-slate-400 mt-2'>
+          Para pagar con tarjeta: usar Visa/Mastercard dentro de Binance Pay.
+        </p>
+      </div>`;
+      break;
+  }
+
+  div.innerHTML = html;
+});
+</script>
+
+</body>
+</html>
